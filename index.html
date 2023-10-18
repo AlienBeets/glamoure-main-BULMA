@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Glamoure Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script src="bulma/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="bulma/css/bulma.css">
+    <link rel="stylesheet" href="bulma/css/styles.css">
+    <link rel="stylesheet" href="bulma/sass/utilities/_all.sass">
+   
+  </head>
+  <style>
+    #navbarBasicExample {
+      justify-content: center;
+    }
+  </style>
+  <body class="cuerpo">
+
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-nav">
+          <div class="navbar-nav is-black">
+            <a class="menu-a menu-li" href="#">Inicio</a>
+            <a class="menu-a menu-li" href="#">Agendar Cita</a>
+            <a class="menu-a menu-li" href="index.html"><img class="logotipo" src="images/ESTETICA.png" alt="" ></a></li>
+            <a class="menu-a menu-li" href="#">Contacto</a>
+            <a class="menu-a menu-li" href="#">Sobre Nosotros</a>
+            <p>
+            <!-- Agrega más elementos de navegación según sea necesario -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+            <!--CARRUSEL-->
+            <section>
+              <div id="slider">
+                  <div class="card">
+                      <div class="card-image">
+                          <figure class="image is-10by9 is-covered">
+                              <img src="images/OFERTA_1.jpg" alt="" />
+                          </figure>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <div class="card-image">
+                          <figure class="image is-10by9 is-covered">
+                              <img src="images/OFERTA_2.jpg" alt="" />
+                          </figure>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <div class="card-image">
+                          <p class="image is-10by9 is-covered">
+                              <img src="images/OFERTA_3.jpg" alt="" />
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <script src="script.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+          <script>
+              bulmaCarousel.attach('#slider', {
+                  slidesToScroll: 1,
+                  slidesToShow: 1,
+                  infinite: true,
+                  autoplay: true,
+              });
+              
+          </script>
+
+          <!--OFERTAS-->
+          <div class="container">
+            <div class="row">
+                <div class="col-4"> 
+                <h1 class="titulos">Ofertas</h1></div>
+            </div>
+        </div>
+
+        <div class="container">
+          <div class="columns">
+                           
+              <!-- Modal -->
+
+              <div id="modal1" class="modal">
+                  <div class="modal-contenido">
+                     <h5 class="modal-titulo" id="exampleModalLabel">Oferta 1</h5>                    
+                    <p class="modal-descripcion">Aquí va el contenido de la oferta.</p>
+                    <img src="images/oferta1.jpg" alt="Imagen" class="img-fluid">
+                    <div class="modal-pie">
+                      <span class="cerrar-modal" onclick="cerrarModal1()">&times;</span>
+                  </div>
+                  </div>                    
+                </div>
+                
+                <div id="modal2" class="modal">
+                  <div class="modal-contenido">
+                     <h5 class="modal-titulo" id="exampleModalLabel">Oferta 2</h5>                    
+                    <p class="modal-descripcion">Aquí va el contenido de la oferta numero 2.</p>
+                    <img src="images/oferta2.jpg" alt="Imagen" class="img-fluid">
+                    <div class="modal-pie">
+                      <span class="cerrar-modal" onclick="cerrarModal2()">&times;</span>
+                  </div>
+                  </div>                    
+                </div>
+                <div id="modal3" class="modal">
+                  <div class="modal-contenido">
+                     <h5 class="modal-titulo" id="exampleModalLabel">Oferta 3</h5>                    
+                    <p class="modal-descripcion">Peinado moderno para calvos</p>
+                    <img src="images/oferta3.jpg" alt="Imagen" class="img-fluid">
+                    <div class="modal-pie">
+                      <span class="cerrar-modal" onclick="cerrarModal3()">&times;</span>
+                  </div>
+                  </div>                    
+                </div>
+
+                <!-- TARJETAS DE OFERTAS--> 
+                  <div id=navbarBasicExample class="column is-4">
+                      <div class="card" >
+                          <a href="#" onclick="mostrarModal1()"><img src="images/oferta1.jpg" class="img" alt="Avatar" style="width:100%">    </a>
+                                                
+                        </div>
+                   </div>
+                   <div id=navbarBasicExample class="column is-4">
+                      <div class="card" >
+                          <a href="#" onclick="mostrarModal2()"><img src="images/oferta2.jpg" class="img" alt="Avatar" style="width:100%">    </a>                        
+                        </div>
+                   </div>
+                   <div id=navbarBasicExample class="column is-4">
+                      <div class="card" >
+                           <a href="#" onclick="mostrarModal3()"><img src="images/oferta1.jpg" class="img" alt="Avatar" style="width:100%">    </a>                       
+                        </div>
+                   </div>
+              </div>
+          </div>
+
+          <!--COLABORADORES -->
+          <div class="container">
+            <div class="row">
+            <div class="col-4"> 
+                <h1 class="titulos">Colaboradores</h1></div>
+            </div>
+             </div>
+
+            </div>
+            <div class="container">
+               <div class="columns">
+                   <div class="column is-2">
+                       <div class="card2" >
+                           <img src="images/estilista1.jpg" class="img2" alt="Avatar" style="width:100%">                          
+                         </div>
+                   
+                    <div class="container">
+                       <div class="h2-subtitulos">
+                           <h4><b>Roxxane Richie</b></h4>
+                       </div>
+                      
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star"></span>
+                    </div>
+                   </div>
+                   <div class="column is-2">
+                       <div class="card2" >
+                           <img src="images/estilista2.jpg" class="img2" alt="Avatar" style="width:100%">                          
+                         </div>
+                   
+                    <div class="container">
+                       <div class="h2-subtitulos">
+                           <h4><b>Evan Petters</b></h4>
+                       </div>
+                      
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star"></span>
+                    </div>
+                   </div>
+                   <div class="column is-2">
+                       <div class="card2" >
+                           <img src="images/estilista3.jpg" class="img2" alt="Avatar" style="width:100%">                          
+                         </div>
+                   
+                    <div class="container">
+                       <div class="h2-subtitulos">
+                           <h4><b>José Eliberto</b></h4>
+                       </div>
+                      
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star checked"></span>
+                       <span class="fa fa-star"></span>
+                    </div>
+                   </div>
+                       <div class="column is-2">
+                           <div class="card2" >
+                               <img src="images/estilista4.jpg" class="img2" alt="Avatar" style="width:100%">                          
+                             </div>
+                       
+                        <div class="container">
+                           <div class="h2-subtitulos">
+                               <h4><b>Luis Javier</b></h4>
+                           </div>
+                          
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star"></span>
+                        </div>
+                       </div>
+                       <div class="column is-2">
+                           <div class="card2" >
+                               <img src="images/estilista5.jpg" class="img2" alt="Avatar" style="width:100%">                          
+                             </div>
+                       
+                        <div class="container">
+                           <div class="h2-subtitulos">
+                               <h4><b>Lina Quintero</b></h4>
+                           </div>
+                          
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star"></span>
+                        </div>
+                       </div>
+                       <div class="column is-2">
+                           <div class="card2" >
+                               <img src="images/estilista6.jpg" class="img2" alt="Avatar" style="width:100%">                          
+                             </div>
+                       
+                        <div class="container">
+                           <div class="h2-subtitulos">
+                               <h4><b>Eva Ferre</b></h4>
+                           </div>
+                                                         
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                           <span class="fa fa-star checked"></span>
+                        </div>
+                       </div>
+                   </div>
+               </div>
+
+
+  </body>
+</html>
