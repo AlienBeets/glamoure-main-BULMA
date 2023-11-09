@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      body {
+     cursor: url('images/cursor_2.png'), auto;
+ }
+ </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Glamoure Bulma!</title>
@@ -19,6 +24,15 @@
     <link rel="stylesheet" href="bulma/sass/utilities/_all.sass">
    
   </head>
+  <script>
+    $(document).ready(function () {
+      // Maneja el clic en los elementos del menú
+      $(".menu-a").click(function () {
+        // Cierra el navbar al hacer clic en un elemento del menú
+        $(".navbar-collapse").collapse("hide");
+      });
+    });
+  </script>
   <style>
     #navbarBasicExample {
       justify-content: center;
@@ -39,11 +53,11 @@
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-nav">
           <div class="navbar-nav is-black">
-            <a class="menu-a menu-li" href="#">Inicio</a>
-            <a class="menu-a menu-li" href="#">Agendar Cita</a>
+            <a class="menu-a menu-li" href="index.html">Inicio</a>
+            <a class="menu-a menu-li" href="agendar.html">Agendar Cita</a>
             <a class="menu-a menu-li" href="index.html"><img class="logotipo" src="images/ESTETICA.png" alt="" ></a></li>
-            <a class="menu-a menu-li" href="#">Contacto</a>
-            <a class="menu-a menu-li" href="#">Sobre Nosotros</a>
+            <a class="menu-a menu-li" href="contacto.html">Contacto</a>
+            <a class="menu-a menu-li" href="info.html">Sobre Nosotros</a>
             <p>
             <!-- Agrega más elementos de navegación según sea necesario -->
           </div>

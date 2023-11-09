@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <style>
+        body {
+       cursor: url('images/cursor_2.png'), auto;
+   }
+   </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Glamoure Agendar en Bulma!</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script src="bulma/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="bulma/css/bulma.css">
+    <link rel="stylesheet" href="bulma/css/styles.css">
+    <link rel="stylesheet" href="bulma/sass/utilities/_all.sass">
+
+    
+    
+
+        <script>
+            $(document).ready(function () {
+              // Maneja el clic en los elementos del menú
+              $(".menu-a").click(function () {
+                // Cierra el navbar al hacer clic en un elemento del menú
+                $(".navbar-collapse").collapse("hide");
+              });
+            });
+          </script>
+          <script>
+          function mostrarModal1() {
+            var modal = document.getElementById("modal1");
+            modal.classList.add("mostrar");
+          }
+          
+          function cerrarModal1() {
+            var modal = document.getElementById("modal1");
+            modal.classList.remove("mostrar");
+          }     
+          </script>
+                 
+                 <script>
+                 function mostrarModal2() {
+                   var modal = document.getElementById("modal2");
+                   modal.classList.add("mostrar");
+                 }
+                 
+                 function cerrarModal2() {
+                   var modal = document.getElementById("modal2");
+                   modal.classList.remove("mostrar");
+                 }     
+                 </script>
+                        
+                        <script>
+                        function mostrarModal3() {
+                          var modal = document.getElementById("modal3");
+                          modal.classList.add("mostrar");
+                        }
+                        
+                        function cerrarModal3() {
+                          var modal = document.getElementById("modal3");
+                          modal.classList.remove("mostrar");
+                        }     
+                        </script>
+                        <style>
+                          #navbarBasicExample {
+                            justify-content: center;
+                          }
+                        </style>
+       
+    </head>
+    <body class="cuerpo">
+    
+      <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-nav">
+            <div class="navbar-nav is-black">
+              <a class="menu-a menu-li" href="index.html">Inicio</a>
+              <a class="menu-a menu-li" href="agendar.html">Agendar Cita</a>
+              <a class="menu-a menu-li" href="index.html"><img class="logotipo" src="images/ESTETICA.png" alt="" ></a></li>
+              <a class="menu-a menu-li" href="contacto.html">Contacto</a>
+              <a class="menu-a menu-li" href="info.html">Sobre Nosotros</a>
+              <p>
+              <!-- Agrega más elementos de navegación según sea necesario -->
+            </div>
+          </div>
+        </div>
+      </nav>
+
+         <!-- carrusel -->
+
+  <div>
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <h1 class="titulos">Personalizar Cita</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-3">
+          <div class="contenido is-4">
+            <div class="card2">
+              <img src="images/estilista6.jpg" class="img2" alt="Avatar" style="width:100%">
+            </div>
+            <div class="h2-subtitulos text-center column is-12">
+              <h2 class="h2-subtitulos"><b>Eva Ferre</b></h4>
+            </div>
+
+            <div class="select" class="column is-4">
+              <select>
+                <option>Elegir colaborador</option>
+                <option href="#">Roxxane Richie</option>
+                <option href="#">Evan Petters</option>
+                <option href="#">José Eliberto</option>
+                <option href="#">Luis Javier</option>
+                <option href="#">Lina Quintero</option>
+                <option href="#">Eva Ferre</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+        <div class="column is-10">
+          <h2 class="h2-subtitulos text-center">Noviembre</h2>
+          <div class="calendar" id="calendar"></div>
+        </div>
+        <script>
+          // Función para crear el calendario
+          function createCalendar() {
+            const calendar = document.getElementById("calendar");
+            const daysInMonth = 31; // Cambia esto para reflejar el número de días del mes
+
+            for (let day = 1; day <= daysInMonth; day++) {
+              const dayElement = document.createElement("div");
+              dayElement.classList.add("day");
+              dayElement.textContent = day;
+              dayElement.addEventListener("click", function () {
+                // Remueve la clase 'selected' de todos los días
+                const selectedDays = document.querySelectorAll(".day.selected");
+                selectedDays.forEach(function (selectedDay) {
+                  selectedDay.classList.remove("selected");
+                });
+
+                // Agrega la clase 'selected' al día seleccionado
+                dayElement.classList.add("selected");
+              });
+
+              calendar.appendChild(dayElement);
+            }
+          }
+
+          createCalendar();
+        </script>
+      </div>
+      <p class="h3-subtitulos">
+        Recuerde que la disponibilidad de los colaboradores varía en funcion del servicio seleccionado.
+      </p>
+      <label for="exampleInputEmail1" class="h2-subtitulos">
+                  Ingresa tu correo para recibir tu numero de cita:
+      </label> 
+
+      <form role="form">
+        <div class="field">
+          <label class="label"></label>
+          <div class="control">
+            <input class="input" id="exampleInputEmail1" type="email" placeholder="correo@example.com">
+          </div>
+        </div>
+
+        <div class="contenido">
+          <div class="select">
+            <select>
+              <option>Seleccionar servicio</option>
+              <option href="#">Corte de cabello</option>
+              <option href="#">Depilación laser</option>
+              <option href="#">Manicure</option>
+              <option href="#">Arreglado de barba</option>
+              <option href="#">Alaciado</option>
+            </select>
+          </div>
+
+          <div class="col-10 has-text-centered is-centered"> <button type="submit" class="btn_aceptar" onclick="mostrarModal1()">
+            Agendar Cita
+          </button></div>
+        </div>
+
+      </form> 
+
+
+    </div>
+
+    <!-- Modal -->
+    <div class="container">
+      <div id="modal1" class="modal">
+        <div class="modal-contenido">
+          <h5 class="modal-titulo" id="exampleModalLabel">ATENCIÓN</h5>
+          <p class="modal-descripcion">Cita agendada con éxito</p>
+          <img src="images/exito.png" alt="Imagen" class="img-fluid">
+          <div class="modal-pie">
+            <span class="cerrar-modal" onclick="cerrarModal1()">&times;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    </body>
+</html>
